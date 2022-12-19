@@ -1,0 +1,34 @@
+
+.calculadora {
+border: 3px rgb(93, 8, 44) ridge;
+width: 250px;
+text-align: center;
+background-color: #1c99ca;
+border-radius: 0.8em;
+margin: auto;
+}
+
+#textoPantalla {
+width: 185px;
+border: 2px black solid; 
+text-align: right; 
+position: relative; 
+left: 23px;  
+padding: 12px 9px;
+border-radius: 0.5em;
+background-color: white; 
+font-family: "courier new"; 
+overflow: hidden;
+}
+
+.calculadora [type=button] {
+width: 40px;
+padding: 15px;
+border-radius: 0.3em;
+}
+
+.calculadora input.largo {
+color: rgb(214, 20, 20);
+width: 70px;
+
+}
