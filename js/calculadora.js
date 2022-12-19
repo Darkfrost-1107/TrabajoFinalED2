@@ -1,6 +1,3 @@
-function cut(i){
-    return i.substr(0, i.length - 1);
-}
 function Solve(com){
     let text = com;
     let op, op1, op2, res;
@@ -36,17 +33,7 @@ function Solve(com){
         res = Operate(op1,op[3],op2);
         text = text.replace(op1 + op[3] + op2,res);
     }
-    /*
-    pattern = /^-?(\d|\.)*$/g;
-    if(pattern.test(text))
-        return ChompPlus(text);
-    else
-        return "ERR";
-        */
        return ChompPlus(text);
-
-
-
 }
 
 function Operate(a, sign, b){
