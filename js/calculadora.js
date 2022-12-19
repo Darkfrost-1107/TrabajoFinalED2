@@ -1,23 +1,15 @@
 function cut(i){
     return i.substr(0, i.length - 1);
 }
-
-function switchSign(){
-    ;
-}
-
 function Solve(com){
-    alert(com);
     let text = com;
     let op, op1, op2, res;
     for(pattern = /^.*(\(([0-9\.\+\-\*\/]+)\)).*$/; pattern.test(text);){
         op = pattern.exec(text);
-        alert(op);
         text = text.replace(op[1],Solve(op[2]));
     }
     for(pattern = /(^|\+|\-|\/|\*)(-?[0-9\.]+)(\*)(-?[0-9\.]+)($|\+|\-|\/|\*)/; pattern.test(text);){
         op = pattern.exec(text);
-        alert(op);
         op1 = op[2];
         op2 = op[4];
         res = Operate(op1,op[3],op2);
@@ -25,7 +17,6 @@ function Solve(com){
     }
     for(pattern = /(^|\+|\-|\/)(-?[0-9\.]+)(\/)(-?[0-9\.]+)($|\+|\-|\/)?/; pattern.test(text);){
         op = pattern.exec(text);
-        alert(op);
         op1 = op[2];
         op2 = op[4];
         res = Operate(op1,op[3],op2);
@@ -33,7 +24,6 @@ function Solve(com){
     }
     for(pattern = /(^|\+|\-)(-?[0-9\.]+)(\+)(-?[0-9\.]+)($|\+|\-)/; pattern.test(text);){
         op = pattern.exec(text);
-        alert(op);
         op1 = op[2];
         op2 = op[4];
         res = Operate(op1,op[3],op2);
@@ -41,7 +31,6 @@ function Solve(com){
     }
     for(pattern = /(^|\-)(-?[0-9\.]+)(\-)(-?[0-9\.]+)($|\-)/; pattern.test(text);){
         op = pattern.exec(text);
-        alert(op);
         op1 = op[2];
         op2 = op[4];
         res = Operate(op1,op[3],op2);
@@ -57,11 +46,10 @@ function Solve(com){
        return ChompPlus(text);
 
 
-   
+
 }
 
 function Operate(a, sign, b){
-    alert(a + ";" + sign + ";" + b);
     switch(sign){
         case "":
             return parseFloat(b);
