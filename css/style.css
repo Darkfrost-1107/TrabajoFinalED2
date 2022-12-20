@@ -59,6 +59,9 @@ body{
     height : 100%;
     background-color: aliceblue;
 }
+.Historial header{
+    width: 100%;
+}
 .Historial header *{
     display: inline;
 }
