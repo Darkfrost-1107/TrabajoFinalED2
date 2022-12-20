@@ -63,7 +63,7 @@ function Solve(com, print){
 }
 
 function Operate(a, sign, b){
-    alert(a + ";" + sign + ";" + b);
+    //alert(a + ";" + sign + ";" + b);
     switch(sign){
         case "":
             return parseFloat(b);
